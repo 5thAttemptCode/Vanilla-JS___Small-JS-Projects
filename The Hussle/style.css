@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body{
+    background: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    top: 5%;
+    width: 80px;
+    height: 1o0px;
+    display: grid;
+    place-items: center;
+    color: #95ff16;
+    border: 1px solid #95ff16;
+    padding: 5px;
+    animation: blur-in 1s linear;
+}
+
+
+#container{
+    position: absolute;
+    background: #1a1a1a;
+    backdrop-filter: blur(10px);
+    border: 5px solid #272727;
+    height: 275px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+    animation: blur-in 2s linear;
+}
+
+@keyframes blur-in{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+#btn{
+    position: absolute;
+    bottom: 50px;
+    height: 50px;
+    width: 250px;
+    font-size: 18px;
+    background: #272727;
+    border: 2px solid #95ff16;
+    color: #95ff16;
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: scale(0.99);
+}
+
+#btn:hover{
+    z-index: 1000;
+    box-shadow: -1px 1px 20px 5px #95ff16;
+    transform: scale(1);
+}
+
+#btn:active{
+    transform: scale(0.99);
+    box-shadow: none;
+}
+
+#output{
+    position: absolute;
+    width: 80%;
+    top: 50px;
+    font-size: 25px;
+    color: #95ff16;
+}
+
+@media (max-width: 1024px){
+    #container{
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 768px){
+    #container{
+        width: 80%;
+        height: 50%;
+    }
+}
